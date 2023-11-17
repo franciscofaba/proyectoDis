@@ -1,10 +1,14 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Navbar from './componentes/Navbar';
+import Navbars from './componentes/Navbars';
+import Footer from './componentes/Footer';
 
 function ProductoIndividual() {
     return (
-        <Navbar></Navbar>
+        <>
+          <Navbars></Navbars>
+          <Footer></Footer>
+        </>
     );
 }
 

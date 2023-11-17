@@ -14,7 +14,7 @@ import Productos from './pages/productos'
 
 function App() {
   return (
-    <div >
+    <div class="bg-warning">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

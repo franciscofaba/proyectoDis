@@ -1,15 +1,17 @@
 import React from 'react';
 
-import Navbar from './componentes/Navbar';
+import Navbars from './componentes/Navbars';
 import CardContainer from './componentes/CardContainer';
-
+import Footer from './componentes/Footer';
 
 function Productos() {
     return (
     <>
-        <Navbar></Navbar>
+        <Navbars></Navbars>
         <CardContainer></CardContainer>
         
+        <br></br>
+        <Footer></Footer>
     </>
 
     );
