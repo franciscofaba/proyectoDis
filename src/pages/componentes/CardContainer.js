@@ -1,6 +1,5 @@
 import React from 'react';
-import Card from './Card';
-import dropdown from 'react-bootstrap/';
+import FakeStorePage from './ApiFakestore';
 import CardTop from './CardTop';
 
 function CardContainer() {
@@ -12,27 +11,8 @@ function CardContainer() {
                 </div>
                 <div className='col-sm-10 m-1'>
                     <CardTop></CardTop>
-                    <div className='row m-4'>
-                        <div className='col-sm-4'>
-                            <Card></Card>
-                        </div>
-                        <div className='col-sm-4'>
-                            <Card></Card>
-                        </div>
-                        <div className='col-sm-4'>
-                            <Card></Card>
-                        </div>
-                    </div>
-                    <div className='row m-4'>
-                        <div className='col-sm-4'>
-                            <Card></Card>
-                        </div>
-                        <div className='col-sm-4'>
-                            <Card></Card>
-                        </div>
-                        <div className='col-sm-4'>
-                            <Card></Card>
-                        </div>
+                    <div className='row m-4 d-flex'>
+                        <FakeStorePage></FakeStorePage>
                     </div>
 
                 </div>

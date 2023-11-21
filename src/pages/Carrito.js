@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import Navbars from './componentes/Navbars';
 import Footer from './componentes/Footer';
 import Formcarrito from './componentes/FormCarrito';

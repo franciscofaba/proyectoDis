@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-
+import React  from 'react';
 function FormContacto() {
   return (
     <Form>

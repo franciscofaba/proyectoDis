@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import foto1 from './fotos/foto1.jpg'
 import foto2 from './fotos/foto2.jpg'
 import foto3 from './fotos/foto3.jpg'
+import React  from 'react';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
