@@ -33,7 +33,7 @@ function Cardproducto() {
         <br></br>
         <Card.Title>Precio: $ 549.990</Card.Title>
         <br></br>
-        <Button variant="primary">Agregar al carrito</Button>
+        <Button color="warnin">Agregar al carrito</Button>
       </Card.Body>
     </Card>
   );

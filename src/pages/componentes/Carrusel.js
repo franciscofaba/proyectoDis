@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import foto1 from './fotos/foto1.jpg'
-import foto2 from './fotos/foto2.jpg'
+import foto2 from './fotos/NO.jpg'
 import foto3 from './fotos/foto3.jpg'
 import React  from 'react';
 
@@ -24,8 +24,8 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img src={foto2} class="d-block w-100" alt="..."/>
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          
+        
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

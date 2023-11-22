@@ -1,14 +1,25 @@
-
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-import React  from 'react';
+
 function CardTop() {
+  const tiendaTexto = "¡Bienvenido a nuestra tienda en línea! Descubre una amplia variedad de productos de alta calidad.";
+  const categoriasProductos = ["Electrónicos", "Ropa", "Hogar", "Deportes", "Juguetes"];
+
   return (
     <Card>
-      <Card.Header>Featured</Card.Header>
+      <Card.Header>¡Explora Nuestra Tienda!</Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>Bienvenido a TiendaXYZ</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          {tiendaTexto}
+        </Card.Text>
+        <Card.Text>
+     
+          <ul>
+            {categoriasProductos.map((categoria, index) => (
+              <li key={index}>{categoria}</li>
+            ))}
+          </ul>
         </Card.Text>
       </Card.Body>
     </Card>

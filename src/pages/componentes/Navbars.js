@@ -13,10 +13,10 @@ function Navbars() {
       };
     return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar bg="dark" data-bs-theme="dark"  >
         <Container>
           <Navbar.Brand href="#home">
-            <Link class="navbar-brand" to="/">logo</Link>
+            <Link class="navbar-brand" to="/">home</Link>
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link>

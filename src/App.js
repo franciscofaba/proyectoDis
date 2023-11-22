@@ -17,7 +17,7 @@ import Productos from './pages/productos'
 
 function App() {
   return (
-    <div class="bg-warning">
+    <div  style={{backgroundColor: 'rgba(226, 198, 146, 0.811)'}}>
       <ProveedorContexto>
         <BrowserRouter>
           <Routes>

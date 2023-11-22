@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Card from 'react-bootstrap/Card';
 
-function CardFAQ() {
-    return (
+function CardFAQ({ pregunta }) {
+  const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
 
+  const toggleRespuesta = () => {
+    setMostrarRespuesta(!mostrarRespuesta);
+  };
 
-            <div class="card">
-            <div class="card-header">
-                Quote
-            </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                <p>A well-known quote, contained in a blockquote element.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-            </div>
-            </div>
-    );
+  return (
+    <Card>
+      <Card.Header style= {{backgroundColor : "darkgrey"}} onClick={toggleRespuesta}>
+      {pregunta}
+      </Card.Header>
+      {mostrarRespuesta && (
+        <Card.Body>
+          <Card.Text>
+            Respuesta a la pregunta frecuente: "{pregunta}".
+          </Card.Text>
+        </Card.Body>
+      )}
+    </Card>
+  );
 }
 
 export default CardFAQ;
+
