@@ -17,7 +17,7 @@ import Productos from './pages/productos'
 
 function App() {
   return (
-    <div  style={{backgroundColor: 'rgba(226, 198, 146, 0.811)'}}>
+    <div  style={{backgroundColor: 'rgba(244, 244, 244, 0.906)'}}>
       <ProveedorContexto>
         <BrowserRouter>
           <Routes>

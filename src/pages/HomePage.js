@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from 'react';
 import Navbars from './componentes/Navbars';
 import Footer from './componentes/Footer';
@@ -13,24 +10,39 @@ function HomePage() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setColor((prevColor) => (prevColor === '#777067' ? 'white' : '#777067'));
-    }, 1000); // Cambia de color cada segundo (1000 milisegundos)
+    }, 1000);
 
-    return () => clearInterval(intervalId); // Limpia el intervalo al desmontar el componente
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
     <>
-      <Navbars></Navbars>
+     
+     
 
-      <div className='container custom-background p-3 text-center'>
-        <h1 style={{ color, fontFamily: 'Copperplate' }}>¡Bienvenidos a nuestra tienda!</h1>
-        <div className='row p-3'>
-          <div className='col-2'></div>
-          <div className='col-8 text-center'>
-            <ControlledCarousel></ControlledCarousel>
-          </div>
-        </div>
+     
+      <Navbars></Navbars>
+      <div
+        style={{
+          backgroundColor: '#333', 
+          color: 'white',
+          textAlign: 'center',
+          padding: '10px',
+          fontSize: '18px',
+          fontFamily: 'copperplate',
+        }}
+      >
+        ¡Envío gratis en pedidos superiores a $50.000! 
       </div>
+
+      <div className='container text-center' style={{ color: '#746ab0' }}>
+        <h1 style={{ color, fontFamily: 'Copperplate', fontSize: 80 }}>
+          ¡Bienvenidos a nuestra tienda!
+        </h1>
+        
+        <ControlledCarousel></ControlledCarousel>
+      </div>
+
       <Incentivos></Incentivos>
       <Footer></Footer>
     </>

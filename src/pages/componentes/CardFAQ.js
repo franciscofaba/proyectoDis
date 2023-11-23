@@ -10,7 +10,7 @@ function CardFAQ({ pregunta }) {
 
   return (
     <Card>
-      <Card.Header style= {{backgroundColor : "darkgrey"}} onClick={toggleRespuesta}>
+      <Card.Header style= {{backgroundColor : "rgb(240, 54, 228)"}} onClick={toggleRespuesta}>
       {pregunta}
       </Card.Header>
       {mostrarRespuesta && (
