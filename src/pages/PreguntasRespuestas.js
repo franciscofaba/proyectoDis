@@ -25,6 +25,8 @@ function PreguntasRespuestas() {
         </div>
         <div className='row p-5'></div>
       </div>
+
+      
       <Footer></Footer>
     </>
   );

@@ -17,7 +17,7 @@ const Galeria = () => {
     return (
       <section id="pics" className="GALERIA">
       
-        <div className="contenedor-galeria" style = {{display: 'flex' , justifyContent: 'center', alignItems: 'center', flexWrap : ' wrap'}}>
+        <div className="contenedor" style = {{display: 'flex' , justifyContent: 'center', alignItems: 'center', flexWrap : ' wrap'}}>
           {imagenes.map((imagen, index) => (
             <img
               key={index}

@@ -42,10 +42,12 @@ function HomePage() {
         </h1>
         
         <ControlledCarousel></ControlledCarousel>
+        <Incentivos></Incentivos>
+        <Galeria></Galeria>
       </div>
 
-      <Incentivos></Incentivos>
-      <Galeria></Galeria>
+    
+      
       <div
         style={{
           backgroundColor: '#333', 

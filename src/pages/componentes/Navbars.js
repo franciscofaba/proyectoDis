@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -10,65 +10,72 @@ function  Navbars (){
 
   const { setMostrarComponente } = useAppState();
 
-
+  const location = useLocation();
 
   return (
     <>
-      <Navbar  data-bs-theme="dark">
-        <Container style={{  display: 'flex', justifyContent: 'center', fontFamily:'copperplate' }}>
-          <Navbar.Brand>
-            <Link className="navbar-brand" to="/" style={{ color: 'black' }}>
-              Home
-            </Link>
-          </Navbar.Brand>
+      <Navbar  data-bs-theme="dark" style={{color: "white",backgroundColor : '#2E4053' }}>
+        <Container style={{ margintop:'-10px',marginBottom:'-10px',display: 'flex', justifyContent: 'center', fontFamily:'copperplate', fontSize: '24px',}}>
+         
           <Nav className="me-auto">
-            <Nav.Link>
-              <Button variant="nav-link"
+
+            <Button variant="nav-link ">
+              <Link className={"nav-link"} to="/" style={{ marginRight:'10px'}}>
+                <h5>Home</h5>
+              </Link>
+            </Button>
+
+              <Button variant="nav-link p-0"
                 onClick={() => setMostrarComponente(false)}
               >
                 <Link
-                  className={`nav-link }`}
-                  to="/productos"style={{ color: 'black' }}
+                  className={`nav-link `}
+                  to="/productos"
+                  
                 >
-                  Productos
+                  <h5>Productos</h5>
                 </Link>
               </Button>
-            </Nav.Link>
-            <Nav.Link>
+
+
               <Button variant="nav-link">
                 <Link
                   className={`nav-link }`}
-                  to="/contacto" style={{ color: 'black' }}
+                  to="/contacto" 
+                  
                 >
-                  Contacto
+                  <h5>Contacto</h5>
                 </Link>
                 
               </Button>
               
-            </Nav.Link>
-            <Nav.Link>
+
+              <Button variant="nav-link p-0">
+                <Link
+                  className={`nav-link `}
+                  to="/faq"
+                  
+                >
+                  <h5>FAQ's</h5>
+                </Link>
+                
+              </Button>
+              
+
               <Button variant="nav-link">
                 <Link
                   className={`nav-link `}
-                  to="/faq"style={{ color: 'black' }}
+                  to="/acercade"
+                  
                 >
-                  FAQ's
-                </Link>
-                
-              </Button>
-              
-            </Nav.Link>
-            <Nav.Link>
-              <Button variant="nav-link">
-                <Link
-                  className={`nav-link ')}`}
-                  to="/acercade"style={{ color: 'black' }}
-                >
-                  Nosotros
+                 <h5>
+                 Nosotros
+                  </h5> 
+                  
                 </Link>
 
               </Button>
-            </Nav.Link>
+
           </Nav>
 
           <Nav style={{ display: 'flex', justifyContent: 'center' ,fontFamily: 'copperplate'}}>
@@ -80,7 +87,8 @@ function  Navbars (){
               >
                 <Link
                 className={`nav-link`}
-                to="/productos"style={{ color: 'black' }}
+                to="/productos"
+                
                 >
                 
                   Carrito{' '}

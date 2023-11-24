@@ -13,5 +13,14 @@ code {
     monospace;
 }
 
+#principal{
+  background-image: url(./pages/componentes/fotos/fondo-tienda-.jpg);
+  background-image: no-repear;
+  background-position: center center;
+  height: 1800px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 
 

@@ -5,7 +5,7 @@ import tt from './fotos/LOGOS/tik-tok.png'
 
 function Footer() {
   return (
-    <div className="container">
+    <div className="container bg-light">
       <footer className="py-5">
         <div className="row">
           <div className="col-6 col-md-2 mb-3">
