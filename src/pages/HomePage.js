@@ -3,6 +3,8 @@ import Navbars from './componentes/Navbars';
 import Footer from './componentes/Footer';
 import ControlledCarousel from './componentes/Carrusel';
 import Incentivos from './componentes/Incentivos';
+import Galeria from './componentes/galeria';
+
 
 function HomePage() {
   const [color, setColor] = useState('#777067');
@@ -36,7 +38,7 @@ function HomePage() {
       </div>
 
       <div className='container text-center' style={{ color: '#746ab0' }}>
-        <h1 style={{ color, fontFamily: 'Copperplate', fontSize: 80 }}>
+        <h1 style={{ color, fontFamily: 'Copperplate', fontSize: 100 }}>
           ¡Bienvenidos a nuestra tienda!
         </h1>
         
@@ -44,6 +46,7 @@ function HomePage() {
       </div>
 
       <Incentivos></Incentivos>
+      <Galeria></Galeria>
       <Footer></Footer>
     </>
   );
