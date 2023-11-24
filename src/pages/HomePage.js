@@ -47,6 +47,18 @@ function HomePage() {
 
       <Incentivos></Incentivos>
       <Galeria></Galeria>
+      <div
+        style={{
+          backgroundColor: '#333', 
+          color: 'white',
+          textAlign: 'center',
+          padding: '20px',
+          fontSize: '18px',
+          fontFamily: 'copperplate',
+        }}
+      >
+        ¡Uilizando el codigo 2OOFF obtén un 20% de descuento en tu primera compra! 
+      </div>
       <Footer></Footer>
     </>
   );

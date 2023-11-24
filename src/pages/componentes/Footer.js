@@ -22,7 +22,7 @@ function Footer() {
 
           <div className="col-md-6 offset-md-1 mb-3">
             <form>
-              <h5>Subscribe to our newsletter</h5>
+              <h5>Subscribete a nuestro newsletter</h5>
               <p>Recibirás información, noticias y descuentos cada mes</p>
               <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label htmlFor="newsletter1" className="visually-hidden">
@@ -35,7 +35,7 @@ function Footer() {
                   placeholder="Email address"
                 />
                 <button className="btn btn-dark" type="button">
-                  Subscribe
+                  Subscribrse
                 </button>
               </div>
             </form>
@@ -47,7 +47,7 @@ function Footer() {
           <ul className="list-unstyled d-flex">
             {/* Íconos de redes sociales como imágenes */}
             <li className="ms-3">
-              <a className="link-dark" href="URL_DEL_ENLACE_DE_FACEBOOK">
+              <a className="link-dark" href="https://es-la.facebook.com/">
                 <img src={facebookIcon} alt="Facebook" width="24" height="24" />
               </a>
             </li>

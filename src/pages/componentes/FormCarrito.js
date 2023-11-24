@@ -13,8 +13,8 @@ function Formcarrito() {
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="password" placeholder="Nombre" />
         </Form.Group>
       </Row>
 
@@ -43,7 +43,7 @@ function Formcarrito() {
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
+          <Form.Label>Código postal</Form.Label>
           <Form.Control />
         </Form.Group>
       </Row>

@@ -21,7 +21,7 @@ const Card = (props) => {
   };
 
   return (
-    <div className='col-sm-4 d-inline-flex'>
+    <div className='col-sm-4 d-inline-flex mb-3 '>
         <BootstrapCard style={{ width: '20rem' , height:'32rem'}}>
           <br></br>
           <div className='d-flex justify-content-center m-2'>
@@ -36,7 +36,14 @@ const Card = (props) => {
               </div>
               <h5 class="card-title text-align-center d-flex justify-content-center">{price}$</h5>
               <br></br>
-              <Link class="btn btn-outline-primary d-flex justify-content-center " onClick={actualizarDato} to='/productoindividual'>Ir al producto</Link>
+              <Link
+  className="btn d-flex justify-content-center"
+  style={{ backgroundColor: '#333', borderColor: 'rgb(237, 121, 229)', color: '#fff', fontFamily: 'copperplate' }}
+  onClick={actualizarDato}
+  to='/productoindividual'
+>
+  Ir al producto
+</Link>
             </div>
           </BootstrapCard.Body>
         </BootstrapCard>
