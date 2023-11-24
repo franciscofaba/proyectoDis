@@ -18,8 +18,6 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img src={foto2} class="d-block w-100" alt="..."/>
         <Carousel.Caption>
-          <h3></h3>
-          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

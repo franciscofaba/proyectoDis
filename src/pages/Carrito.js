@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbars from './componentes/Navbars';
+
 import Footer from './componentes/Footer';
 import Formcarrito from './componentes/FormCarrito';
 function Carrito() {
+
     return (
         <>
-          <Navbars></Navbars>
           <div className='container bg-light p-3'>
             <div className='row p-3'>
                 <div className='col-2'>

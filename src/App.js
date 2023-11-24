@@ -4,7 +4,6 @@ import './App.css';
 import { BrowserRouter , Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import HomePage from './pages/HomePage';
-import { ProveedorContexto } from './pages/Contexto';
 
 import AcercaDe from './pages/AcercaDe'
 import Carrito from './pages/Carrito'
@@ -18,7 +17,6 @@ import Productos from './pages/productos'
 function App() {
   return (
     <div  style={{backgroundColor: 'rgba(244, 244, 244, 0.906)'}}>
-      <ProveedorContexto>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -32,8 +30,6 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-
-      </ProveedorContexto>
     </div>
   
   );

@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Navbars from './componentes/Navbars';
 import Footer from './componentes/Footer';
 import FormContacto from './componentes/FormContacto';
 
 function Contacto() {
     return (
     <div>
-        <Navbars></Navbars>
             <div className='container bg-light p-3'>
                 <div className='row p-3'>
                     <div className='col-2'>

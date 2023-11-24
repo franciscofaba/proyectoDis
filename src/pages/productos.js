@@ -1,16 +1,42 @@
 import React from 'react';
-
-import Navbars from './componentes/Navbars';
+import { useState } from 'react';
+import Cart2 from './componentes/Cart2';
 import CardContainer from './componentes/CardContainer';
 import Footer from './componentes/Footer';
 
+import { useAppState } from './componentes/AppStateContext';
 
 function Productos() {
+    const [allProducts, setAllProducts] = useState([]);
+	const [total, setTotal] = useState(0);
+	const [countProducts, setCountProducts] = useState(0);
+    const {mostrarComponente, setMostrarComponente } = useAppState();
+if (!mostrarComponente) {
+    return (
+      <> <CardContainer
+      allProducts={allProducts}
+      setAllProducts={setAllProducts}
+      total={total}
+      setTotal={setTotal}
+      countProducts={countProducts}
+      setCountProducts={setCountProducts} />
+  
+        <Footer></Footer>
+
+      </>
+    );
+  }
     return (
     <>
-        <Navbars></Navbars>
-        <CardContainer></CardContainer>
-        
+        <Cart2
+            allProducts={allProducts}
+			setAllProducts={setAllProducts}
+			total={total}
+			setTotal={setTotal}
+			countProducts={countProducts}
+			setCountProducts={setCountProducts} />
+            
+
         <Footer></Footer>
     </>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Navbars from './componentes/Navbars';
 import Footer from './componentes/Footer';
 import Us from './componentes/us';
 
@@ -9,7 +8,6 @@ function AcercaDe() {
     return (
         <>
 
-          <Navbars></Navbars>
           <fotos></fotos>
           <div className='container bg-light p-3'>
             <div className='row p-3'>

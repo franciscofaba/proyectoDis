@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbars from './componentes/Navbars';
+
 import Footer from './componentes/Footer';
 import ControlledCarousel from './componentes/Carrusel';
 import Incentivos from './componentes/Incentivos';
@@ -21,7 +21,6 @@ function HomePage() {
      
 
      
-      <Navbars></Navbars>
       <div
         style={{
           backgroundColor: '#333', 

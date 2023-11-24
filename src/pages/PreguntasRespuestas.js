@@ -1,12 +1,11 @@
 import React from 'react';
-import Navbars from './componentes/Navbars';
+
 import Footer from './componentes/Footer';
 import CardFAQ from './componentes/CardFAQ';
 
 function PreguntasRespuestas() {
   return (
     <>
-      <Navbars></Navbars>
 
       <div className='container bg-light p-3'>
         <div className='row p-3'>
