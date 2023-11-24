@@ -3,6 +3,13 @@ import Card from 'react-bootstrap/Card';
 import React from 'react';
 import Imagen from './fotos/box.png';
 function Cardproducto() {
+
+
+
+
+
+
+  
   return (
     <Card>
       <Card.Header as="h5">Producto</Card.Header>

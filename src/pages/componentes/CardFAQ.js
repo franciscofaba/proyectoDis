@@ -10,12 +10,12 @@ function CardFAQ({ pregunta }) {
 
   return (
     <Card>
-      <Card.Header style= {{backgroundColor : "rgb(240, 54, 228)"}} onClick={toggleRespuesta}>
+      <Card.Header style= {{color: "white",backgroundColor : "#333", fontFamily:'copperplate'}} onClick={toggleRespuesta}>
       {pregunta}
       </Card.Header>
       {mostrarRespuesta && (
         <Card.Body>
-          <Card.Text>
+          <Card.Text style= {{color: "#333", boxShadow: '0 4px 4px rgb(240, 54, 228)'}}>
             Respuesta a la pregunta frecuente: "{pregunta}".
           </Card.Text>
         </Card.Body>

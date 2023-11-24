@@ -14,12 +14,12 @@ function AcercaDe() {
                 <div className='col-2'>
                 </div>
                 <div className='col-8 text-center'>
-                  <h1>Quiénes somos</h1>
+                  <h1 style={{fontFamily: 'copperplate'}}>Quiénes somos</h1>
                 </div>
             </div>
             <div className='row p-5'>
               
-              <p>Nos emociona presentarles nuestra plataforma de venta en línea de productos, una iniciativa creada por estudiantes comprometidos con la excelencia académica.
+              <p style={{fontFamily: 'copperplate'}}>Nos emociona presentarles nuestra plataforma de venta en línea de productos, una iniciativa creada por estudiantes comprometidos con la excelencia académica.
 
 En nuestro sitio web, encontrarás una amplia variedad de productos cuidadosamente seleccionados para satisfacer tus necesidades y preferencias. Desde productos electrónicos hasta moda, hogar y más, nos esforzamos por ofrecer una experiencia de compra completa y conveniente. </p>
 

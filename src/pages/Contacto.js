@@ -12,7 +12,7 @@ function Contacto() {
 
                     </div>
                     <div className='col-8 text-center'>
-                        <h1 className='m-4'>¿Como podemos ayudarte?</h1>
+                        <h1 className='m-4' style={{fontFamily: 'copperplate'}}>¿Como podemos ayudarte?</h1>
                         <FormContacto></FormContacto>
                     </div>
                 </div>

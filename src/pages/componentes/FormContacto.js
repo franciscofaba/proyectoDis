@@ -24,7 +24,7 @@ function FormContacto() {
     <>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label style={{fontFamily: 'copperplate'}}>Email address</Form.Label>
           <Form.Control
             type="email"
             placeholder="name@example.com"
@@ -33,7 +33,7 @@ function FormContacto() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Deja tu mensaje (máximo 50 caracteres)</Form.Label>
+          <Form.Label style={{fontFamily: 'copperplate'}}>Deja tu mensaje (máximo 50 caracteres)</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
