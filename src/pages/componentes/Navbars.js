@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button } from 'react-bootstrap';
-import { useAppState } from './AppStateContext';
+import { useAppState} from './AppStateContext';
 function  Navbars (){
 
-  const location = useLocation();
 
-
-  const { mostrarComponente, setMostrarComponente } = useAppState();
+  const { setMostrarComponente } = useAppState();
 
 
 

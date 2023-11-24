@@ -6,12 +6,17 @@ export const useAppState = () => {
   return useContext(AppStateContext);
 };
 
-export const AppStateProvider = ({ children }) => {
+export const AppStateProvider = (
+  { children }) => {
+
   const [mostrarComponente, setMostrarComponente] = useState(false);
 
+  
 
+
+  
   return (
-    <AppStateContext.Provider value={{ mostrarComponente, setMostrarComponente }}>
+    <AppStateContext.Provider value={{ mostrarComponente, setMostrarComponente}}>
       {children}
     </AppStateContext.Provider>
   );

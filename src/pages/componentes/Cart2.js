@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import React  from 'react';
 
 const Cart2 = ({
@@ -9,7 +9,8 @@ const Cart2 = ({
 	setCountProducts,
 	setTotal,
 	}) => {
-	const [active, setActive] = useState(false);
+
+	
 
 	const onDeleteProduct = product => {
 		const results = allProducts.filter(
@@ -17,7 +18,7 @@ const Cart2 = ({
 		);
 
 		setTotal(total - product.price );
-		setCountProducts(countProducts);
+		setCountProducts(countProducts-1);
 		setAllProducts(results);
 	};
 
@@ -29,65 +30,49 @@ const Cart2 = ({
 
 	return (
 		<div  class="container bg-warning">
-			<h1>Tienda</h1>
-
-			<div className='container-icon'>
-				<div
-					className='container-cart-icon'
-				>
-					<div className='count-products'>
-						<span id='contador-productos'>
-							<h6>productos totales:{countProducts}</h6>
-							</span>
-					</div>
-				</div>
-
-				<div>
-					{allProducts.length ? (
-						<>
-							<div className='row-product'>
+			<div className='count-products'>
+				<span id='contador-productos'>
+					<h6>productos totales:{countProducts}</h6>
+				</span>
+			</div>
+			<div>
+				{allProducts.length ? (
+					<>
+					<div className='row-product'>
 								{allProducts.map(product => (
-									<div className='cart-product' key={product.id}>
-										<div className='info-cart-product'>
-											<p className='titulo-producto-carrito'>
+									<div className='card' key={product.id}>
+										<div className='row m-3'>
+											<p className='col-4'>
 												{product.title}
 											</p>
-											<span className='precio-producto-carrito'>
+											<div className='col-1'>
 												${product.price}
-											</span>
+											</div>
+											<button
+												onClick={() => onDeleteProduct(product)}
+												className='col-2 btn btn-ouline-primary'
+											>
+												delete product
+											</button>
 										</div>
-										<svg
-											xmlns='http://www.w3.org/2000/svg'
-											fill='none'
-											viewBox='0 0 24 24'
-											strokeWidth='1.5'
-											stroke='currentColor'
-											className='icon-close'
-											onClick={() => onDeleteProduct(product)}
-										>
-											<path
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												d='M6 18L18 6M6 6l12 12'
-											/>
-										</svg>
+										
+										
 									</div>
 								))}
 							</div>
 
-							<div className='cart-total'>
-								<h3>Total:</h3>
-								<span className='total-pagar'>${total}</span>
-							</div>
+						<div className='cart-total'>
+							<h3>Total:</h3>
+							<span className='total-pagar'>${total}</span>
+						</div>
 
-							<button className='btn-clear-all' onClick={onCleanCart}>
-								Vaciar Carrito
-							</button>
-						</>
-					) : (
-						<p className='cart-empty'>El carrito está vacío</p>
-					)}
-				</div>
+						<button className='btn-clear-all' onClick={onCleanCart}>
+							Vaciar Carrito
+						</button>
+					</>
+				) : (
+					<p className='cart-empty'>El carrito está vacío</p>
+				)}
 			</div>
 		</div>
 	);

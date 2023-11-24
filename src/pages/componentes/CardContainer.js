@@ -13,18 +13,9 @@ const CardContainer = ({
     countProducts,
 	setCountProducts,
 	total,
-	setTotal, })=> 
-{
+	setTotal, })=>{
     const onAddProduct = product => {
-		if (allProducts.find(item => item.id === product.id)) {
-			const products = allProducts.map(item =>
-				item.id === product.id
-					
-			);
-			setTotal(total + product.price);
-			setCountProducts(countProducts + 1);
-			return setAllProducts([...products]);
-		}
+		
 
 		setTotal(total + product.price);
 		setCountProducts(countProducts + 1);
