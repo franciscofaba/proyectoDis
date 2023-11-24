@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {Link} from "react-router-dom";
 import { Card as BootstrapCard } from 'react-bootstrap';
-
+import Nav from 'react-bootstrap/Nav';
 
 
 const CardContainer = ({
@@ -21,11 +21,10 @@ const CardContainer = ({
 		setCountProducts(countProducts + 1);
 		setAllProducts([...allProducts, product]);
 	};
-
-    const containerStyle = {boxShadow: '0 4px 4px rgb(240, 54, 228)',}
+    
 
     const [products, setProducts] = useState([]);
-
+    const [categoria, setcategoria] = useState('electronics');
     useEffect(() => {
         axios
         .get('https://fakestoreapi.com/products')
@@ -36,21 +35,38 @@ const CardContainer = ({
         console.error('Error al cargar productos:', error);
         });
     }, []);
+    const productosFiltrados = products.filter(producto => producto.category === categoria);
 
 
 
     return (
-        
-        <div className='container bg-light p-3' style={containerStyle}>
-            <div className='row'>
-                <div className='col-1'>
+        <>
+        <CardTop></CardTop>
+        <div className='container bg-light p-3' >
+        <Nav variant="tabs" >
+        <Nav.Item>
+            <Nav.Link eventKey="link-1" onClick={() => setcategoria('electronics')}>Electronica</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link eventKey="link-2" onClick={() => setcategoria('jewelery')}>Joyeria</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link eventKey="link-3" onClick={() => setcategoria("men's clothing")}>Hombre</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link eventKey="link-4" onClick={() => setcategoria("women's clothing")}>Mujer</Nav.Link>
+        </Nav.Item>
+        </Nav>
 
+
+
+            <div className='row'>
+                <div className='col-sm-1 m-1'>
                 </div>
                 <div className='col-sm-10 m-1'>
-                    <CardTop></CardTop>
                     <div className='row m-4 d-flex'>
                         <div>
-                            {products.map((product) => (
+                            {productosFiltrados.map((product) => (
                                             <div className='col-sm-4 d-inline-flex' key={product.id}>
                                                 <BootstrapCard style={{ width: '20rem' , height:'36rem'}}>
                                                     <br></br>
@@ -64,10 +80,14 @@ const CardContainer = ({
                                                                     <h5 class="card-title text-align-center d-flex justify-content-center">{product.title}</h5>
                                                                 </div>
                                                             </div>
-                                                            <h5 class="card-title text-align-center d-flex justify-content-center">{product.price}$</h5>
-                                                            <br></br>
-                                                            <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
-                                                            <Link class="btn btn-outline-primary d-flex justify-content-center m-2"  to='/productoindividual' onClick={() => onAddProduct(product)}>Ir al producto</Link>
+                                                            <div style={{
+                                                                backgroundcolor:"#EAE2E0"}}>
+                                                                <h5 class="card-title text-align-center d-flex justify-content-center">{product.price}$</h5>
+                                                                <br></br>
+                                                                <button class="btn btn-outline-primary d-flex justify-content-center m-2" onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+                                                                <Link class="btn btn-warning d-flex justify-content-center m-2"  to='/productoindividual' onClick={() => onAddProduct(product)}>Ir al producto</Link>
+
+                                                            </div>
                                                             
                                                         </div>
                                                     </BootstrapCard.Body>
@@ -79,9 +99,10 @@ const CardContainer = ({
 
                 </div>
 
-
+            
             </div>
         </div>
+    </>
 	);
 };
 

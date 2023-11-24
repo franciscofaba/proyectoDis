@@ -6,23 +6,18 @@ function CardTop() {
   const categoriasProductos = ["Electrónicos", "Ropa", "Hogar", "Deportes", "Juguetes"];
 
   return (
-    <Card>
-      <Card.Header>¡Explora Nuestra Tienda!</Card.Header>
-      <Card.Body>
+    <>
+      <h4 style={{margin:'0px', padding:"1rem", backgroundColor: '#333', color:'white'}}>¡Explora Nuestra Tienda!</h4>
         
-        <Card.Text>
-          {tiendaTexto}
-        </Card.Text>
-        <Card.Text>
-     
-          <ul>
-            {categoriasProductos.map((categoria, index) => (
-              <li key={index}>{categoria}</li>
-            ))}
-          </ul>
-        </Card.Text>
-      </Card.Body>
-    </Card>
+
+        <h6 style={{margin:'0px', padding:"1rem", backgroundColor: 'lightblue'}}> {tiendaTexto}</h6>
+
+
+      
+    
+    </>
+    
+
   );
 }
 
