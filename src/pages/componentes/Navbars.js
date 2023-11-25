@@ -22,7 +22,7 @@ function  Navbars (){
 
 
   const { setMostrarComponente } = useAppState();
-  const { numeroDeElementosEnCarrito , setnumeroDeElementosEnCarrito} = useCarrito();
+  const { numeroDeElementosEnCarrito } = useCarrito();
 
   return (
     <>

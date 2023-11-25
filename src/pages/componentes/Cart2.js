@@ -11,7 +11,7 @@ const Cart2 = ({
 	setTotal,
 	}) => {
 
-	const { numeroDeElementosEnCarrito , actualizarCarrito} = useCarrito();
+	const { actualizarCarrito} = useCarrito();
 
 	const onDeleteProduct = product => {
 		const results = allProducts.filter(
@@ -31,12 +31,12 @@ const Cart2 = ({
 		quitarcontador(countProducts);
 	};
 	const quitarAlCarrito = (countProducts) =>{
-        const nuevoNumero = {countProducts}
+        
 
           actualizarCarrito(countProducts);
         };
 	const quitarcontador = (countProducts) =>{
-		const nuevoNumero = {countProducts}
+		
 
 			actualizarCarrito(0);
 		};

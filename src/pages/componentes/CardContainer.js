@@ -6,7 +6,7 @@ import axios from 'axios';
 import { Card as BootstrapCard } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import { useCarrito } from './CarritoContext';
-import { ImageOff, Import } from 'lucide-react';
+
 import Offcanva from './Offcanvas';
 
 
@@ -36,13 +36,12 @@ const CardContainer = ({
 
 
 
-    const { numeroDeElementosEnCarrito, actualizarCarrito } = useCarrito();
+    const { actualizarCarrito } = useCarrito();
     
     
    
       
     const agregarAlCarrito = (countProducts) =>{
-        const nuevoNumero = {countProducts}
 
           actualizarCarrito(countProducts + 1);
         };
