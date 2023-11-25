@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 
-function CardFAQ({ pregunta }) {
+function CardFAQ({ pregunta , respuesta}) {
   const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
 
   const toggleRespuesta = () => {
@@ -16,7 +16,7 @@ function CardFAQ({ pregunta }) {
       {mostrarRespuesta && (
         <Card.Body>
           <Card.Text style= {{color: "#333", boxShadow: '0 4px 4px rgb(240, 54, 228)'}}>
-            Respuesta a la pregunta frecuente: "{pregunta}".
+            {respuesta}
           </Card.Text>
         </Card.Body>
       )}
