@@ -14,8 +14,8 @@ function Footer() {
             <div className="col-6 col-md-2 mb-3">
               <h5>Section</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2">
-                  <a style = {{color: 'white'}} href="/#" className="nav-link p-0 text-muted">
+                <li  style = {{color: 'white'}} className="nav-item mb-2">
+                  <a style = {{color: 'white'}} href="/#" className="nav-link p-0 ">
                     Home
                   </a>
                 </li>
@@ -37,7 +37,7 @@ function Footer() {
                     className="form-control"
                     placeholder="Email address"
                   />
-                  <button className="btn btn-dark" type="button">
+                  <button style={{ color: 'rgb(237, 121, 229)' , border: 'solid rgb(237, 121, 229) '}} className="btn btn-dark" type="button">
                     Subscribrse
                   </button>
                 </div>

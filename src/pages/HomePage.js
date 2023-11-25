@@ -63,7 +63,7 @@ function HomePage() {
           fontFamily: 'copperplate',
         }}
       >
-        ¡Uilizando el código 2OOFF obtén un 20% de descuento en tu primera compra!
+        ¡Utilizando el código 2OOFF obtén un 20% de descuento en tu primera compra!
       </div>
 
       <Footer></Footer>
