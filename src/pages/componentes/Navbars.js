@@ -1,16 +1,28 @@
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button } from 'react-bootstrap';
 import { useAppState} from './AppStateContext';
+
+import { useCarrito } from './CarritoContext';
+
+
 function  Navbars (){
+  
+  
+  const alcarrito = () => {
+
+    setMostrarComponente(true);
+  }
+
+  
+
 
 
   const { setMostrarComponente } = useAppState();
-
-  const location = useLocation();
+  const { numeroDeElementosEnCarrito , setnumeroDeElementosEnCarrito} = useCarrito();
 
   return (
     <>
@@ -19,14 +31,15 @@ function  Navbars (){
          
           <Nav className="me-auto">
 
-            <Button variant="nav-link ">
+            <Button variant="nav-link "
+            >
               <Link className={"nav-link"} to="/" style={{ marginRight:'10px'}}>
                 <h5>Home</h5>
               </Link>
             </Button>
 
               <Button variant="nav-link p-0"
-                onClick={() => setMostrarComponente(false)}
+              onClick={() => setMostrarComponente(false)}
               >
                 <Link
                   className={`nav-link `}
@@ -38,7 +51,9 @@ function  Navbars (){
               </Button>
 
 
-              <Button variant="nav-link">
+              <Button variant="nav-link"
+        
+              >
                 <Link
                   className={`nav-link }`}
                   to="/contacto" 
@@ -79,19 +94,22 @@ function  Navbars (){
           </Nav>
 
           <Nav style={{ display: 'flex', justifyContent: 'center' ,fontFamily: 'copperplate'}}>
-            <Nav.Link>
+            <Nav.Link >
+
+              
               <Button
+              
                 className={`nav-link `}
                 style={{ color: 'black' }}
-                onClick={() => setMostrarComponente(true)}
+                onClick={() => alcarrito()}
               >
+                
                 <Link
                 className={`nav-link`}
                 to="/productos"
                 
                 >
-                
-                  Carrito{' '}
+                  Carrito
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -108,6 +126,7 @@ function  Navbars (){
                     <circle cx="19" cy="21" r="1" />
                     <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
                   </svg>
+                  <h5>items: {numeroDeElementosEnCarrito}</h5>
                 </Link>
               </Button>
               

@@ -2,9 +2,10 @@ import React from 'react';
 import CardTop from './CardTop';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import {Link} from "react-router-dom";
+import { AppStateProvider, useAppState } from './AppStateContext';
 import { Card as BootstrapCard } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import { useCarrito } from './CarritoContext';
 
 
 const CardContainer = ({
@@ -13,18 +14,52 @@ const CardContainer = ({
     countProducts,
 	setCountProducts,
 	total,
-	setTotal, })=>{
+	setTotal, 
+    UnProducto,
+    setUnProducto,
+    Var,
+    setVar})=>{
     const onAddProduct = product => {
 		
 
 		setTotal(total + product.price);
 		setCountProducts(countProducts + 1);
 		setAllProducts([...allProducts, product]);
+        
 	};
-    
 
+
+
+        
+
+   
+
+
+
+
+    const { numeroDeElementosEnCarrito, actualizarCarrito } = useCarrito();
+    
+    
+   
+      
+    const agregarAlCarrito = () =>{
+        const nuevoNumero = numeroDeElementosEnCarrito+1
+
+          actualizarCarrito(nuevoNumero);
+        };
+      
+
+
+    const handleAmbasFunciones = product => {
+            onAddProduct(product);
+            agregarAlCarrito();
+            
+          };
     const [products, setProducts] = useState([]);
     const [categoria, setcategoria] = useState('electronics');
+    
+
+
     useEffect(() => {
         axios
         .get('https://fakestoreapi.com/products')
@@ -84,9 +119,9 @@ const CardContainer = ({
                                                                 backgroundcolor:"#EAE2E0"}}>
                                                                 <h5 class="card-title text-align-center d-flex justify-content-center">{product.price}$</h5>
                                                                 <br></br>
-                                                                <button style= {{backgroundColor:'rgb(237, 121, 229)'}} class="btn  d-flex justify-content-center m-2" onClick={() => onAddProduct(product)}>Añadir al carrito</button>
-                                                                <Link style= {{backgroundColor:'#333',color:'white'}}class="btn d-flex justify-content-center m-2"  to='/productoindividual' onClick={() => onAddProduct(product)}>Ir al producto</Link>
-
+                                                                 
+                                                                <button style= {{backgroundColor:'rgb(237, 121, 229)'}} class="btn  d-flex justify-content-center m-2" onClick={() => handleAmbasFunciones (product)}>Añadir al carrito</button>
+                                                                
                                                             </div>
                                                             
                                                         </div>
