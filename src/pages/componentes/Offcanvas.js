@@ -15,8 +15,8 @@ const Offcanva = (props) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch
+      <Button style={{backgroundColor:"rgb(237, 121, 229)"}} onClick={handleShow}>
+        Detalles
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
