@@ -5,13 +5,12 @@ import ControlledCarousel from './componentes/Carrusel';
 import Incentivos from './componentes/Incentivos';
 import Galeria from './componentes/galeria';
 
-
 function HomePage() {
-  const [color, setColor] = useState('#777067');
+  const [backgroundColor, setBackgroundColor] = useState('#777067');
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setColor((prevColor) => (prevColor === '#777067' ? 'white' : '#777067'));
+      setBackgroundColor((prevColor) => (prevColor === '#777067' ? 'white' : '#777067'));
     }, 1000);
 
     return () => clearInterval(intervalId);
@@ -19,47 +18,45 @@ function HomePage() {
 
   return (
     <>
-     
-     
-
-     
       <div
         style={{
-          backgroundColor: '#333', 
-          color: 'white',
+          backgroundColor: backgroundColor, // Usar el color dinámico
+          color: '#333',
           textAlign: 'center',
           padding: '10px',
           fontSize: '18px',
           fontFamily: 'copperplate',
         }}
       >
-        ¡Envío gratis en pedidos superiores a $50.000! 
+        ¡Envío gratis en pedidos superiores a $50.000!
       </div>
 
-      <div className='container text-center' style={{ color: '#746ab0' }}>
-        <h1 style={{ color, fontFamily: 'Copperplate', fontSize: 100 }}>
+      <div className='container text-center' style={{ color: 'white' }}>
+        <h1 style={{ color: 'white', fontFamily: 'Copperplate', fontSize: 100 }}>
           ¡Bienvenidos a nuestra tienda!
         </h1>
-        
+
         <ControlledCarousel></ControlledCarousel>
         <Incentivos></Incentivos>
+        <br></br>
         <Galeria></Galeria>
       </div>
 
-    
-      
+      <br></br>
+
       <div
         style={{
-          backgroundColor: '#333', 
-          color: 'white',
+          backgroundColor: 'white',
+          color: '#333',
           textAlign: 'center',
           padding: '20px',
           fontSize: '18px',
           fontFamily: 'copperplate',
         }}
       >
-        ¡Uilizando el codigo 2OOFF obtén un 20% de descuento en tu primera compra! 
+        ¡Uilizando el código 2OOFF obtén un 20% de descuento en tu primera compra!
       </div>
+
       <Footer></Footer>
     </>
   );

@@ -14,7 +14,7 @@ function  Navbars (){
 
   return (
     <>
-      <Navbar  data-bs-theme="dark" style={{color: "white",backgroundColor : '#2E4053' }}>
+      <Navbar  data-bs-theme="dark" style={{color: "white",backgroundColor : '#333' }}>
         <Container style={{ margintop:'-10px',marginBottom:'-10px',display: 'flex', justifyContent: 'center', fontFamily:'copperplate', fontSize: '24px',}}>
          
           <Nav className="me-auto">

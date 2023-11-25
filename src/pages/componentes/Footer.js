@@ -15,17 +15,17 @@ function Footer() {
               <h5>Section</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="/#" className="nav-link p-0 text-muted">
+                  <a style = {{color: 'white'}} href="/#" className="nav-link p-0 text-muted">
                     Home
                   </a>
                 </li>
-                {/* Otros elementos */}
+              
               </ul>
             </div>
 
             <div className="col-md-6 offset-md-1 mb-3">
               <form>
-                <h5>Subscribete a nuestro newsletter</h5>
+                <h5 >Subscribete a nuestro newsletter</h5>
                 <p>Recibirás información, noticias y descuentos cada mes</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                   <label htmlFor="newsletter1" className="visually-hidden">
