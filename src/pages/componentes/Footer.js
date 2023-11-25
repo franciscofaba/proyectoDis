@@ -5,7 +5,7 @@ import tt from './fotos/LOGOS/tik-tok.png'
 
 function Footer() {
   return (
-    <div className="bg-light">
+    <div className="bg-dark" style={{color:'white'}}>
       <div className='container'>
 
 
@@ -50,7 +50,7 @@ function Footer() {
             <ul className="list-unstyled d-flex">
               {/* Íconos de redes sociales como imágenes */}
               <li className="ms-3">
-                <a className="link-dark" href="https://es-la.facebook.com/">
+                <a className="link-light" href="https://es-la.facebook.com/">
                   <img src={facebookIcon} alt="Facebook" width="24" height="24" />
                 </a>
               </li>

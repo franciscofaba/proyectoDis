@@ -29,52 +29,74 @@ const Cart2 = ({
 	};
 
 	return (
-		<div  class="container bg-warning">
-			<div className='count-products'>
-				<span id='contador-productos'>
-					<h6>productos totales:{countProducts}</h6>
-				</span>
-			</div>
-			<div>
-				{allProducts.length ? (
-					<>
-					<div className='row-product'>
-								{allProducts.map(product => (
-									<div className='card' key={product.id}>
-										<div className='row m-3'>
-											<p className='col-4'>
-												{product.title}
-											</p>
-											<div className='col-1'>
-												${product.price}
-											</div>
-											<button
-												onClick={() => onDeleteProduct(product)}
-												className='col-2 btn btn-ouline-primary'
-											>
-												delete product
-											</button>
-										</div>
-										
-										
-									</div>
-								))}
-							</div>
+<>
+		<div class="container bg-dark" style={{color:'white',padding:'1rem'}}>
+				<h6>Cantidad de productos: {countProducts}</h6>
 
-						<div className='cart-total'>
-							<h3>Total:</h3>
-							<span className='total-pagar'>${total}</span>
-						</div>
-
-						<button className='btn-clear-all' onClick={onCleanCart}>
-							Vaciar Carrito
-						</button>
-					</>
-				) : (
-					<p className='cart-empty'>El carrito está vacío</p>
-				)}
-			</div>
 		</div>
+			
+			<div  class="container bg-light">
+				<div>
+					{allProducts.length ? (
+						<>
+						<div className='row-product'>
+									{allProducts.map(product => (
+										<div className='card' key={product.id}>
+											<div className='row m-3'>
+												<p className='col-8'>
+													{product.title}
+												</p>
+												<div className='col-1'>
+													<h5>${product.price}</h5>
+												</div>
+												<div className='col-2'>
+													<button className='btn btn-danger'
+														onClick={() => onDeleteProduct(product)}
+														
+													>
+														delete product
+													</button>
+												</div>
+											</div>
+											
+											
+										</div>
+									))}
+								</div>
+
+							<div className='container' style={{margin:'2rem'}}>
+								<h3>Total: ${total}</h3>
+								
+							</div>
+							<div className='container '>	
+								<div className='row'>
+									<div className='col-8 d-flex justify-content-start'>
+										<button className='btn btn-success' style={{marginBottom:'1rem',paddingLeft:'2rem',paddingRight:'2rem'}} >
+											Pagar
+										</button>
+
+									</div>
+
+									<div className='col-4 d-flex justify-content-end'>
+										<button className='btn btn-danger' style={{marginBottom:'1rem'}}onClick={onCleanCart}>
+											Vaciar Carrito
+										</button>
+
+									</div>
+								</div>
+								
+								
+							</div>
+						</>
+					) : (
+						<div className='container d-flex justify-content-center' style={{padding:'8rem'}}>
+						
+							<h5 className='cart-empty'>El carrito está vacío todavia</h5>
+						</div>
+					)}
+				</div>
+			</div>
+</>
 	);
 };
 export default Cart2;

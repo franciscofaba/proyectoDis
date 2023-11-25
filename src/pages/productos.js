@@ -19,7 +19,9 @@ function Productos() {
 
 if (!mostrarComponente) {
     return (
-      <> <CardContainer
+      <> 
+
+        <CardContainer
           allProducts={allProducts}
           setAllProducts={setAllProducts}
           total={total}
