@@ -1,5 +1,6 @@
 
 import React  from 'react';
+import { useCarrito } from './CarritoContext';
 
 const Cart2 = ({
 	allProducts,
@@ -10,23 +11,36 @@ const Cart2 = ({
 	setTotal,
 	}) => {
 
-	
+	const { numeroDeElementosEnCarrito , actualizarCarrito} = useCarrito();
 
 	const onDeleteProduct = product => {
 		const results = allProducts.filter(
 			item => item.id !== product.id
 		);
-
+		
 		setTotal(total - product.price );
 		setCountProducts(countProducts-1);
 		setAllProducts(results);
+		quitarAlCarrito (countProducts-1);
 	};
 
 	const onCleanCart = () => {
 		setAllProducts([]);
 		setTotal(0);
 		setCountProducts(0);
+		quitarcontador(countProducts);
 	};
+	const quitarAlCarrito = (countProducts) =>{
+        const nuevoNumero = {countProducts}
+
+          actualizarCarrito(countProducts);
+        };
+	const quitarcontador = (countProducts) =>{
+		const nuevoNumero = {countProducts}
+
+			actualizarCarrito(0);
+		};
+      
 
 	return (
 <>

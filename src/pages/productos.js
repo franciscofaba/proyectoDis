@@ -14,8 +14,7 @@ function Productos() {
 	const [countProducts, setCountProducts] = useState(0);
   const {mostrarComponente, setMostrarComponente } = useAppState();
   const [UnProducto, setUnProducto] = useState([]);
-  const {mostrarComponente2, setMostrarComponente2 } =useCarrito();
-  const {Var, setVar} = useState();
+
 
 
 if (!mostrarComponente) {
@@ -31,8 +30,7 @@ if (!mostrarComponente) {
           setCountProducts={setCountProducts}
           UnProducto={UnProducto}
           setUnProducto={setUnProducto}
-          Var={Var}
-          setVar={setVar}/>
+          />
         
           
         
