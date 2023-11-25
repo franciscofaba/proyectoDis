@@ -48,7 +48,7 @@ function Footer() {
           <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p style={{ color: 'rgb(237, 121, 229)' }}>© 2022 Company, Inc. All rights reserved.</p>
             <ul className="list-unstyled d-flex">
-              {/* Íconos de redes sociales como imágenes */}
+             
               <li className="ms-3">
                 <a className="link-light" href="https://es-la.facebook.com/">
                   <img src={facebookIcon} alt="Facebook" width="24" height="24" />

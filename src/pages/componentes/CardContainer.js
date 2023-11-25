@@ -42,19 +42,19 @@ const CardContainer = ({
     return (
         <>
         <CardTop></CardTop>
-        <div className='container bg-light p-3' >
+        <div  className='container bg-light p-3' >
         <Nav variant="tabs" >
-        <Nav.Item>
-            <Nav.Link eventKey="link-1" onClick={() => setcategoria('electronics')}>Electronica</Nav.Link>
+        <Nav.Item >
+            <Nav.Link style= {{color:'rgb(237, 121, 229)'}} eventKey="link-1" onClick={() => setcategoria('electronics')}>Electronica</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link eventKey="link-2" onClick={() => setcategoria('jewelery')}>Joyeria</Nav.Link>
+            <Nav.Link style= {{color:'rgb(237, 121, 229)'}}  eventKey="link-2" onClick={() => setcategoria('jewelery')}>Joyeria</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link eventKey="link-3" onClick={() => setcategoria("men's clothing")}>Hombre</Nav.Link>
+            <Nav.Link style= {{color:'rgb(237, 121, 229)'}}  eventKey="link-3" onClick={() => setcategoria("men's clothing")}>Hombre</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link eventKey="link-4" onClick={() => setcategoria("women's clothing")}>Mujer</Nav.Link>
+            <Nav.Link  style= {{color:'rgb(237, 121, 229)'}} eventKey="link-4" onClick={() => setcategoria("women's clothing")}>Mujer</Nav.Link>
         </Nav.Item>
         </Nav>
 
@@ -84,8 +84,8 @@ const CardContainer = ({
                                                                 backgroundcolor:"#EAE2E0"}}>
                                                                 <h5 class="card-title text-align-center d-flex justify-content-center">{product.price}$</h5>
                                                                 <br></br>
-                                                                <button class="btn btn-outline-primary d-flex justify-content-center m-2" onClick={() => onAddProduct(product)}>Añadir al carrito</button>
-                                                                <Link class="btn btn-warning d-flex justify-content-center m-2"  to='/productoindividual' onClick={() => onAddProduct(product)}>Ir al producto</Link>
+                                                                <button style= {{backgroundColor:'rgb(237, 121, 229)'}} class="btn  d-flex justify-content-center m-2" onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+                                                                <Link style= {{backgroundColor:'#333',color:'white'}}class="btn d-flex justify-content-center m-2"  to='/productoindividual' onClick={() => onAddProduct(product)}>Ir al producto</Link>
 
                                                             </div>
                                                             

@@ -4,23 +4,30 @@ import Footer from './componentes/Footer';
 import ControlledCarousel from './componentes/Carrusel';
 import Incentivos from './componentes/Incentivos';
 import Galeria from './componentes/galeria';
+import PopupAd from './componentes/popup';
+import AD from './componentes/fotos/ad.png'
 
 function HomePage() {
-  const [backgroundColor, setBackgroundColor] = useState('#777067');
+  const [backgroundColor, setBackgroundColor] = useState('rgb(237, 121, 229)');
+  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setBackgroundColor((prevColor) => (prevColor === '#777067' ? 'white' : '#777067'));
-    }, 1000);
+      setBackgroundColor((prevColor) => (prevColor === 'rgb(237, 121, 229)' ? 'white' : 'rgb(237, 121, 229)'));
+    }, 500);
 
     return () => clearInterval(intervalId);
   }, []);
+  const closePopup = () => {
+    setShowPopup(false);
+  };
 
   return (
     <>
+  
       <div
         style={{
-          backgroundColor: backgroundColor, // Usar el color dinámico
+          backgroundColor: backgroundColor, 
           color: '#333',
           textAlign: 'center',
           padding: '10px',
@@ -30,7 +37,9 @@ function HomePage() {
       >
         ¡Envío gratis en pedidos superiores a $50.000!
       </div>
-
+      {showPopup && (
+        <PopupAd imageUrl={AD} onClose={closePopup} />
+      )}
       <div className='container text-center' style={{ color: 'white' }}>
         <h1 style={{ color: 'white', fontFamily: 'Copperplate', fontSize: 100 }}>
           ¡Bienvenidos a nuestra tienda!

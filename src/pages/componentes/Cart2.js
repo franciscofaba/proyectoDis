@@ -50,7 +50,7 @@ const Cart2 = ({
 													<h5>${product.price}</h5>
 												</div>
 												<div className='col-2'>
-													<button className='btn btn-danger'
+													<button style= {{backgroundColor:'#333'}}className='btn btn-danger'
 														onClick={() => onDeleteProduct(product)}
 														
 													>
@@ -71,7 +71,7 @@ const Cart2 = ({
 							<div className='container '>	
 								<div className='row'>
 									<div className='col-8 d-flex justify-content-start'>
-										<button className='btn btn-success' style={{marginBottom:'1rem',paddingLeft:'2rem',paddingRight:'2rem'}} >
+										<button  className='btn btn-success' style={{ backgroundColor:'rgb(237, 121, 229)',marginBottom:'1rem',paddingLeft:'2rem',paddingRight:'2rem'}} >
 											Pagar
 										</button>
 

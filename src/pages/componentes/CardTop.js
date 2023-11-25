@@ -7,10 +7,10 @@ function CardTop() {
 
   return (
     <>
-      <h4 style={{margin:'0px', padding:"1rem", backgroundColor: '#333',fontFamily:'copperplate', color:'white',textAlign:'center'}}>¡Explora Nuestra Tienda!</h4>
+      <h4 style={{margin:'0px', padding:"1rem", backgroundColor: '#333',fontFamily:'copperplate', color:'white',textAlign:'center',color:'rgb(237, 121, 229)'}}>¡Explora Nuestra Tienda!</h4>
         
 
-        <h6 style={{margin:'0px', padding:"1rem", backgroundColor: 'rgb(157, 155, 160)',fontFamily:'copperplate',textAlign:'center'}}> {tiendaTexto}</h6>
+        <h6 style={{margin:'0px', padding:"1rem", backgroundColor: 'rgb(157, 155, 160)',fontFamily:'copperplate',textAlign:'center',}}> {tiendaTexto}</h6>
 
 
       
